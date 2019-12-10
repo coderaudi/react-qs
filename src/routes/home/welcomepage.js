@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 
-class ShowPosts extends Component {
+class WelcomePage extends Component {
 
     render() {
         return (
             <div>
-                post list
+                <h3>welcome page </h3>
             </div>
         );
     }
 }
 
-export default ShowPosts;
+export default WelcomePage;

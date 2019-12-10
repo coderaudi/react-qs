@@ -1,47 +1,21 @@
-/**
- * App.js Layout Start Here
- */
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-// import { SpringSpinner } from 'react-epic-spinners';
-// import { IntlProvider } from 'react-intl';
-// import { Redirect, Route } from 'react-router-dom';
-// import { NotificationContainer } from 'react-notifications';
+import React from "react";
+import "./App.css";
+import Footer from "../components/Footer/footer";
+import Header from "../components/Header/header";
+import Slider from "../components/Sliders/homeslider";
 
-// app routes
-import MainApp from '../routes';
+import Toasts from "../components/Toasts/toasts";
+import Dropdown from "../components/Dropdown/dropdown";
+import ArticleForm from "../routers/Articles/addArticle";
+import DisplayArticles from "../routers/Articles/displayArticle";
+function App() {
+  return (
+    <div>
+      <Header />
 
-// App locale
-import AppLocale from '../lang';
-
-class App extends Component {
-
-  state = {
-    loading: true
-  }
-
-  componentDidMount() {
-    let self = this;
-    setTimeout(() => {
-      self.setState({ loading: false });
-    }, 1000);
-  }
-
-  render() {
-
-    return (
-
-     <div>
-       <h1>testing</h1>
-     </div>
-    );
-  }
+      <Footer />
+    </div>
+  );
 }
 
-// map state to props
-const mapStateToProps = ({ settings }) => {
-  // const { user } = authUser;
-  // return { settings, user };
-};
-
-export default connect(mapStateToProps)(App);
+export default App;

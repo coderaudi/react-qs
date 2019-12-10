@@ -1,22 +1,19 @@
-/**
- * Footer
- */
-import React from 'react';
-
-// import { Link } from 'react-router-dom';
-
-// // intl messages
-// import IntlMessages from '../../util/IntlMessages';
-
-
-// // app config
-// import AppConfig from '../../constants/AppConfig';
-
-const Footer = () => (
-	<div className="rct-footer d-flex justify-content-between align-items-center">
-	
-		<h5 className="mb-0">{"AppConfig.copyRightText footertesting"}</h5>
-	</div>
-);
+import React, { Component } from "react";
+import Appconfig from "../../constants/Appconfig";
+class Footer extends Component {
+  state = {};
+  render() {
+    return (
+      <footer class="page-footer font-small bg-info">
+        <div class="footer-copyright text-center py-3 ">
+          <a href="#" className="text-dark">
+            {" "}
+            {Appconfig.copyRightText}
+          </a>
+        </div>
+      </footer>
+    );
+  }
+}
 
 export default Footer;

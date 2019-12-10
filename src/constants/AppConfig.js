@@ -1,48 +1,24 @@
-/**
- * App Config File
- */
 const AppConfig = {
-    appLogo:"",          // App Logo
-    appUrl: '',             // App Url
-    brandName: 'Espl',                                    // Brand Name
-    navCollapsed: false,                                      // Sidebar collapse
-    darkMode: false,                                          // Dark Mode
-    boxLayout: false,                                         // Box Layout
-    rtlLayout: false,                                         // RTL Layout
-    miniSidebar: false,                                       // Mini Sidebar
-    sidebarActiveFilter: 'dark',                              // Select Sidebar Color You can Choose following color 'primary', 'blue', 'warning', 'info', 'danger','success','purple'
-    enableSidebarBackgroundImage: true,                       // Enable Sidebar Background Image
-    sidebarImage: "",     // Select sidebar image
-    locale: {
-        languageId: 'english',
-        locale: 'en',
-        name: 'English',
-        icon: 'en',
-    },
-    enableUserTour: false,                                      // Enable / Disable User Tour
-    copyRightText: 'Espl © 2018 All Rights Reserved.',      // Copy Right Text
-    // light theme colors
-    themeColors: {
-        'primary': '#722ED1',
-        'secondary': '#096DD9',
-        'info': '#13C2C2',
-        'success': '#389E0D',
-        'warning': '#FAAD14',
-        'danger': '#CF1322',
+  crlImage1: require("../assets/img/Image_1.jpg"), // carousel image 1
+  crlImage2: require("../assets/img/Image_2.jpg"), // carousel image 2
+  crlImage3: require("../assets/img/Image_3.jpg"), // carousel image 3
+  appUrl: "https://localhost:44300",
 
-        'default': '#657786',
-        'purple': '#6f42c1',
+  rememberMeSecretKey: "06880621737846692416001235847516",
+  rememberMeSecretIv: "8561754196324561",
+  brandName: "Rx Upload Admin", // Brand Name
+  navCollapsed: false, // Sidebar collapse
+  darkMode: false, // Dark Mode
+  boxLayout: false, // Box Layout
+  rtlLayout: false, // RTL Layout
+  miniSidebar: false, // Mini Sidebar
+  sidebarActiveFilter: "dark", // Select Sidebar Color You can Choose following color 'primary', 'blue', 'warning', 'info', 'danger','success','purple'
+  enableSidebarBackgroundImage: false, // Enable Sidebar Background Image
+  sidebarImage: false, // Select sidebar image
+  currency: "$",
 
-        'yellow': '#D46B08',
-        'white': '#FFFFFF',
-        'dark': '#000000',
-        'greyLighten': '#DFE3E8',
-        'grey': '#9FA5AB'
-    },
-    // dark theme colors
-    darkThemeColors: {
-        darkBgColor: '#424242'
-    }
-}
+  enableUserTour: true, // Enable / Disable User Tour
+  copyRightText: "CoderHome © 2018 All Rights Reserved." // Copy Right Text
+};
 
 export default AppConfig;

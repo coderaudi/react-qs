@@ -1,45 +1,20 @@
-
-/*
- * 
- */
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
-import { ConnectedRouter, routerMiddleware } from 'react-router-redux';
-import Thunk from 'redux-thunk';
-import { Router, Route, Switch } from 'react-router-dom';
-// import createHistory from 'history/createHashHistory';
-import reducers from './reducers';
-
-// // css
-// import './lib/reactifyCss';
-
-// firebase
-
-
-// app component
-import App from './container/App';
-
-// Create a history of your choosing (we're using a hash history in this case)
-// const history = createHistory();
-
-const history = {};
-// Build the middleware for intercepting and dispatching navigation actions
-const middleware = routerMiddleware(history);
-
-const store = createStore(reducers,
-  applyMiddleware(middleware, Thunk)
-)
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./container/App";
+import store from "./store/index";
+import { Provider } from "react-redux";
+import * as serviceWorker from "./serviceWorker";
+import "bootstrap/dist/css/bootstrap.css";
 
 ReactDOM.render(
   <Provider store={store}>
-    {/* <MuiPickersUtilsProvider utils={DateFnsUtils}> */}
-      <Router history={history}>
-        <Switch>
-          <Route path="/" component={App} />
-        </Switch>
-      </Router>
-    {/* </MuiPickersUtilsProvider> */}
-  </Provider>, document.getElementById('root'));
+    <App />
+  </Provider>,
+  document.getElementById("root")
+);
 
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://bit.ly/CRA-PWA
+serviceWorker.unregister();

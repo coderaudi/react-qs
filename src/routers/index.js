@@ -15,11 +15,15 @@ import {
 
 
 import {
-    AsyncHomeComponent
+    AsyncHomeComponent,
+    AsyncDashboardComponent
 } from "../components/AsyncComponent/AsyncComponent";
 
 // import $ from "jquery";
 // import { isMobileDevice, getLabName } from "../helpers/helpers";
+
+import Header from "../components/Header/header";
+import Footer from "../components/Footer/footer";
 
 class MainApp extends Component {
     state = {
@@ -40,18 +44,23 @@ class MainApp extends Component {
 
         return (
             <div >
-
+                <Header />
                 <Switch>
-                 
+
                     <Route
-                        exact
-                        // path={`${this.props.match.url}/account`}
-                        path="/home"
+                        
+                        path="/app/home"
                         component={AsyncHomeComponent}
                     />
+                     <Route
+                        
+                        path="/app/dashboard"
+                        component={AsyncDashboardComponent}
+                    />
+
 
                 </Switch>
-
+                <Footer />
             </div>
         );
     }

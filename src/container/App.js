@@ -1,16 +1,17 @@
 import React from "react";
 import "./App.css";
-import Footer from "../components/Footer/footer";
-import Header from "../components/Header/header";
-
+import { Redirect, Route } from "react-router-dom";
 import MainApp from "../routers/index";
+import AppSignIn from "./signin";
+import AppSignUp from "./signup";
 
 function App() {
   return (
     <div>
-      <Header />
-       <MainApp />
-      <Footer />
+
+            <Route exact path="/" component={AppSignIn} />
+            <Route exact path="/signup" component={AppSignUp} />
+            <Route path="/app" component={MainApp} />
     </div>
   );
 }

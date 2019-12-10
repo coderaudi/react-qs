@@ -13,6 +13,12 @@ const AsyncHomeComponent = Loadable({
   loading: () =>  "loading..." // <RctPageLoader />
 });
 
+const AsyncDashboardComponent = Loadable({
+  loader: () => import("../../routers/dashboard/DashboardPage"),
+  loading: () =>  "loading..." // <RctPageLoader />
+});
+
 export {
   AsyncHomeComponent,
+  AsyncDashboardComponent
 };
